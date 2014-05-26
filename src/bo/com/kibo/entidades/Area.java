@@ -11,6 +11,7 @@ package bo.com.kibo.entidades;
  */
 public class Area extends GeoLugar implements java.io.Serializable {
 
+    //Este es un comentario
     private String codigo;
     private Short anioInicial;
     private Short anioFinal;
