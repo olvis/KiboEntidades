@@ -11,70 +11,13 @@ package bo.com.kibo.entidades;
  */
 public class RolPermiso implements java.io.Serializable {
 
-    public static class Id implements java.io.Serializable {
-
-        private int idPermiso;
-        private int idRol;
-
-        public Id() {
-        }
-
-        public Id(int idPermiso, int idRol) {
-            this.idPermiso = idPermiso;
-            this.idRol = idRol;
-        }
-
-        public int getIdPermiso() {
-            return idPermiso;
-        }
-
-        public void setIdPermiso(int idPermiso) {
-            this.idPermiso = idPermiso;
-        }
-
-        public int getIdRol() {
-            return idRol;
-        }
-
-        public void setIdRol(int idRol) {
-            this.idRol = idRol;
-        }
-
-        @Override
-        public boolean equals(Object other) {
-            if ((this == other)) {
-                return true;
-            }
-            if ((other == null)) {
-                return false;
-            }
-            if (!(other instanceof Id)) {
-                return false;
-            }
-            Id castOther = (Id) other;
-
-            return (this.getIdPermiso() == castOther.getIdPermiso())
-                    && (this.getIdRol() == castOther.getIdRol());
-        }
-
-        @Override
-        public int hashCode() {
-            int result = 17;
-
-            result = 37 * result + this.getIdPermiso();
-            result = 37 * result + this.getIdRol();
-            return result;
-        }
-
-    }
-
-    private Id id = new Id();
+    private RolPermisoId id = new RolPermisoId();
     private Rol rol;
     private Permiso permiso;
     private boolean valor;
 
     public RolPermiso() {
-        
+
     }
 
     public RolPermiso(Rol rol, Permiso permiso, boolean valor) {
@@ -109,12 +52,12 @@ public class RolPermiso implements java.io.Serializable {
         this.valor = valor;
     }
 
-    public Id getId() {
+    public RolPermisoId getId() {
         return id;
     }
 
-    public void setId(Id id) {
+    public void setId(RolPermisoId id) {
         this.id = id;
     }
-    
+
 }
