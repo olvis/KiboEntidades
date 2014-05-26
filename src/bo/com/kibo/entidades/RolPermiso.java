@@ -1,0 +1,120 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package bo.com.kibo.entidades;
+
+/**
+ *
+ * @author Olvinho
+ */
+public class RolPermiso implements java.io.Serializable {
+
+    public static class Id implements java.io.Serializable {
+
+        private int idPermiso;
+        private int idRol;
+
+        public Id() {
+        }
+
+        public Id(int idPermiso, int idRol) {
+            this.idPermiso = idPermiso;
+            this.idRol = idRol;
+        }
+
+        public int getIdPermiso() {
+            return idPermiso;
+        }
+
+        public void setIdPermiso(int idPermiso) {
+            this.idPermiso = idPermiso;
+        }
+
+        public int getIdRol() {
+            return idRol;
+        }
+
+        public void setIdRol(int idRol) {
+            this.idRol = idRol;
+        }
+
+        @Override
+        public boolean equals(Object other) {
+            if ((this == other)) {
+                return true;
+            }
+            if ((other == null)) {
+                return false;
+            }
+            if (!(other instanceof Id)) {
+                return false;
+            }
+            Id castOther = (Id) other;
+
+            return (this.getIdPermiso() == castOther.getIdPermiso())
+                    && (this.getIdRol() == castOther.getIdRol());
+        }
+
+        @Override
+        public int hashCode() {
+            int result = 17;
+
+            result = 37 * result + this.getIdPermiso();
+            result = 37 * result + this.getIdRol();
+            return result;
+        }
+
+    }
+
+    private Id id = new Id();
+    private Rol rol;
+    private Permiso permiso;
+    private boolean valor;
+
+    public RolPermiso() {
+        
+    }
+
+    public RolPermiso(Rol rol, Permiso permiso, boolean valor) {
+        this.rol = rol;
+        this.permiso = permiso;
+        this.id.setIdPermiso(permiso.getId());
+        this.id.setIdRol(rol.getId());
+        this.valor = valor;
+    }
+
+    public Rol getRol() {
+        return rol;
+    }
+
+    public void setRol(Rol rol) {
+        this.rol = rol;
+    }
+
+    public Permiso getPermiso() {
+        return permiso;
+    }
+
+    public void setPermiso(Permiso permiso) {
+        this.permiso = permiso;
+    }
+
+    public boolean isValor() {
+        return valor;
+    }
+
+    public void setValor(boolean valor) {
+        this.valor = valor;
+    }
+
+    public Id getId() {
+        return id;
+    }
+
+    public void setId(Id id) {
+        this.id = id;
+    }
+    
+}
