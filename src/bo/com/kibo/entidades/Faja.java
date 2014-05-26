@@ -11,6 +11,7 @@ package bo.com.kibo.entidades;
  */
 public class Faja extends GeoLugar implements java.io.Serializable {
 
+    //Otro
     private Area area;
     private int numero;
     private String bloque;
