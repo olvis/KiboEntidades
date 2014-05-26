@@ -3,20 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package bo.com.kibo.entidades;
 
 /**
  *
  * @author Olvinho
  */
-public class Area extends GeoLugar implements java.io.Serializable{
-     
+public class Area extends GeoLugar implements java.io.Serializable {
+
     private String codigo;
-     private Short anioInicial;
-     private Short anioFinal;
-     private Byte zonaUTM;
-     private String bandaUTM;
+    private Short anioInicial;
+    private Short anioFinal;
+    private Byte zonaUTM;
+    private String bandaUTM;
 
     public Area() {
         super.setTipo(TIPO_AREA);
@@ -61,5 +60,5 @@ public class Area extends GeoLugar implements java.io.Serializable{
     public void setBandaUTM(String bandaUTM) {
         this.bandaUTM = bandaUTM;
     }
-     
+
 }
