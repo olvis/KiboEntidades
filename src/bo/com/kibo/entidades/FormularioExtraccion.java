@@ -19,6 +19,7 @@ public class FormularioExtraccion extends EncabezadoFormulario implements java.i
     private List<DetalleExtraccion> detalle = new ArrayList<>();
 
     public FormularioExtraccion() {
+        super.setTipo(TIPO_FORMULARIO_CORTA);
     }
 
     public Area getArea() {

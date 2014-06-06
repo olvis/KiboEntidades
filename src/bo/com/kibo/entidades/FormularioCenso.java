@@ -17,9 +17,10 @@ public class FormularioCenso extends EncabezadoFormulario implements java.io.Ser
     private Area area;
     private Byte horas;
     private List<DetalleCenso> detalle = new ArrayList<>();
+    private Faja faja;
 
     public FormularioCenso() {
-
+        super.setTipo(TIPO_FORMULARIO_CENSO);
     }
 
     public Area getArea() {
@@ -46,5 +47,11 @@ public class FormularioCenso extends EncabezadoFormulario implements java.io.Ser
         this.detalle = detalle;
     }
 
-    
+    public Faja getFaja() {
+        return faja;
+    }
+
+    public void setFaja(Faja faja) {
+        this.faja = faja;
+    }
 }

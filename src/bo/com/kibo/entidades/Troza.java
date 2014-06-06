@@ -11,6 +11,18 @@ package bo.com.kibo.entidades;
  */
 public class Troza implements java.io.Serializable {
 
+    public static final byte ESTADO_CENSADA = 0;
+    public static final byte ESTADO_TALADA = 1;
+    public static byte ESTADO_ENPATIO = 2;
+
+    public static final byte EXISTE_EXISTE = 0;
+    public static final byte EXISTE_SECCIONADA = 1;
+    public static final byte EXISTE_CIERRE_INVENTARIO = 2;
+    public static final byte EXISTE_BAJA = 3;
+    public static final byte EXISTE_RECHAZADA_TALA = 4;
+    public static final byte EXISTE_RECHAZADA_EXTRACCION = 5;
+    public static final byte EXISTE_DESPACHADA = 6;
+
     private Integer numero;
     private Troza padre;
     private Especie especie;
@@ -27,6 +39,7 @@ public class Troza implements java.io.Serializable {
     private FormularioCenso formularioCenso;
     private FormularioCorta formularioCorta;
     private FormularioExtraccion formularioExtraccion;
+    private Faja faja;
 
     public Troza() {
     }
@@ -157,6 +170,14 @@ public class Troza implements java.io.Serializable {
 
     public void setFormularioExtraccion(FormularioExtraccion formularioExtraccion) {
         this.formularioExtraccion = formularioExtraccion;
+    }
+
+    public Faja getFaja() {
+        return faja;
+    }
+
+    public void setFaja(Faja faja) {
+        this.faja = faja;
     }
 
 }

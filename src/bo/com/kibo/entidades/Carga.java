@@ -16,6 +16,10 @@ public class Carga implements java.io.Serializable {
     private Integer id;
     private String codigo;
     private Date modificado;
+    private boolean esRama;
+
+    public Carga() {
+    }
 
     public Integer getId() {
         return id;
@@ -41,7 +45,12 @@ public class Carga implements java.io.Serializable {
         this.modificado = modificado;
     }
 
-    public Carga() {
+    public boolean isEsRama() {
+        return esRama;
+    }
+
+    public void setEsRama(boolean esRama) {
+        this.esRama = esRama;
     }
 
 }
