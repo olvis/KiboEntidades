@@ -16,9 +16,8 @@ public class Usuario implements java.io.Serializable {
     private String nombre;
     private String contrasena;
     private String email;
-    
-
-
+    private String contrasenaDesencriptada;
+   
     public Usuario() {
     }
 
@@ -61,6 +60,13 @@ public class Usuario implements java.io.Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-    
 
+    public String getContrasenaDesencriptada() {
+        return contrasenaDesencriptada;
+    }
+
+    public void setContrasenaDesencriptada(String contrasenaDesencriptada) {
+        this.contrasenaDesencriptada = contrasenaDesencriptada;
+    }
+    
 }

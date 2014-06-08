@@ -17,8 +17,6 @@ public class Area extends GeoLugar implements java.io.Serializable {
     private Short anioFinal;
     private Byte zonaUTM;
     private String bandaUTM;
-    
-    //imbesil...
 
     public Area() {
         super.setTipo(TIPO_AREA);

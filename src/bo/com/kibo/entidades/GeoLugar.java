@@ -5,6 +5,7 @@
  */
 package bo.com.kibo.entidades;
 
+import bo.com.kibo.entidades.intf.ISincronizable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -13,7 +14,7 @@ import java.util.List;
  *
  * @author Olvinho
  */
-public class GeoLugar implements java.io.Serializable {
+public class GeoLugar implements java.io.Serializable, ISincronizable {
 
     public static byte TIPO_AREA = 0;
     public static byte TIPO_FAJA = 1;

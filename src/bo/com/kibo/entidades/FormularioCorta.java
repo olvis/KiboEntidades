@@ -20,6 +20,7 @@ public class FormularioCorta extends EncabezadoFormulario implements java.io.Ser
     private List<DetalleCorta> detalle = new ArrayList<>();
     
     public FormularioCorta() {
+        super.setTipo(EncabezadoFormulario.TIPO_FORMULARIO_CORTA);
     }
 
     public Area getArea() {

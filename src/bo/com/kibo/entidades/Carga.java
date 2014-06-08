@@ -5,14 +5,14 @@
  */
 package bo.com.kibo.entidades;
 
+import bo.com.kibo.entidades.intf.ISincronizable;
 import java.util.Date;
 
 /**
  *
  * @author Olvinho
  */
-public class Carga implements java.io.Serializable {
-
+public class Carga implements java.io.Serializable, ISincronizable {
     private Integer id;
     private String codigo;
     private Date modificado;

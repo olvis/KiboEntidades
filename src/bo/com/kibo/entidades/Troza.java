@@ -5,11 +5,15 @@
  */
 package bo.com.kibo.entidades;
 
+import bo.com.kibo.entidades.intf.ISincronizable;
+import java.util.Date;
+import javax.xml.crypto.Data;
+
 /**
  *
  * @author Olvinho
  */
-public class Troza implements java.io.Serializable {
+public class Troza implements java.io.Serializable , ISincronizable{
 
     public static final byte ESTADO_CENSADA = 0;
     public static final byte ESTADO_TALADA = 1;
@@ -22,6 +26,8 @@ public class Troza implements java.io.Serializable {
     public static final byte EXISTE_RECHAZADA_TALA = 4;
     public static final byte EXISTE_RECHAZADA_EXTRACCION = 5;
     public static final byte EXISTE_DESPACHADA = 6;
+    
+    public static final String SEPARADOR_CODIGO = ".";
 
     private Integer numero;
     private Troza padre;
@@ -40,6 +46,7 @@ public class Troza implements java.io.Serializable {
     private FormularioCorta formularioCorta;
     private FormularioExtraccion formularioExtraccion;
     private Faja faja;
+    private Date modificado;
 
     public Troza() {
     }
@@ -180,4 +187,11 @@ public class Troza implements java.io.Serializable {
         this.faja = faja;
     }
 
+    public Date getModificado() {
+        return modificado;
+    }
+
+    public void setModificado(Date modificado) {
+        this.modificado = modificado;
+    }
 }
