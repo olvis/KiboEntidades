@@ -3,25 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package bo.com.kibo.entidades;
 
 /**
  *
  * @author Olvinho
  */
-public class DetalleCenso implements java.io.Serializable{
-     private Integer id;
-     private Calidad calidad;
-     private Especie especie;
-     private String codigo;
-     private Float altura;
-     private Float dap;
-     private String condicion;
-     private Integer punto;
-     private Float x;
-     private Float y;
-     private String observaciones;
+public class DetalleCenso implements java.io.Serializable {
+
+    private Integer id;
+    private Calidad calidad;
+    private Especie especie;
+    private String codigo;
+    private Float altura;
+    private Float dap;
+    private String condicion;
+    private Integer punto;
+    private Float x;
+    private Float y;
+    private String observaciones;
+    private Troza troza;
 
     public DetalleCenso() {
     }
@@ -113,5 +114,13 @@ public class DetalleCenso implements java.io.Serializable{
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
     }
-     
+
+    public void setTroza(Troza troza) {
+        this.troza = troza;
+    }
+
+    public Troza getTroza() {
+        return troza;
+    }
+
 }

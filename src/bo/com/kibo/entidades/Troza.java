@@ -7,7 +7,6 @@ package bo.com.kibo.entidades;
 
 import bo.com.kibo.entidades.intf.ISincronizable;
 import java.util.Date;
-import javax.xml.crypto.Data;
 
 /**
  *
@@ -191,6 +190,7 @@ public class Troza implements java.io.Serializable , ISincronizable{
         return modificado;
     }
 
+   
     public void setModificado(Date modificado) {
         this.modificado = modificado;
     }

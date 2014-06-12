@@ -11,4 +11,5 @@ package bo.com.kibo.entidades.intf;
  * @author Olvinho
  */
 public interface ISincronizable {
+    
 }

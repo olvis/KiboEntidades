@@ -47,6 +47,7 @@ public class GeoLugar implements java.io.Serializable, ISincronizable {
         return modificado;
     }
 
+    
     public void setModificado(Date modificado) {
         this.modificado = modificado;
     }
