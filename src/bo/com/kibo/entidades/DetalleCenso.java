@@ -19,8 +19,8 @@ public class DetalleCenso implements java.io.Serializable {
     private Float dap;
     private String condicion;
     private Integer punto;
-    private Float x;
-    private Float y;
+    private Double x;
+    private Double y;
     private String observaciones;
     private Troza troza;
 
@@ -91,19 +91,19 @@ public class DetalleCenso implements java.io.Serializable {
         this.punto = punto;
     }
 
-    public Float getX() {
+    public Double getX() {
         return x;
     }
 
-    public void setX(Float x) {
+    public void setX(Double x) {
         this.x = x;
     }
 
-    public Float getY() {
+    public Double getY() {
         return y;
     }
 
-    public void setY(Float y) {
+    public void setY(Double y) {
         this.y = y;
     }
 

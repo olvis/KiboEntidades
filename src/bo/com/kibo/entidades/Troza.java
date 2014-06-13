@@ -39,8 +39,8 @@ public class Troza implements java.io.Serializable , ISincronizable{
     private Float largo;
     private Byte estado;
     private Byte existe;
-    private Float x;
-    private Float y;
+    private Double x;
+    private Double y;
     private FormularioCenso formularioCenso;
     private FormularioCorta formularioCorta;
     private FormularioExtraccion formularioExtraccion;
@@ -138,19 +138,19 @@ public class Troza implements java.io.Serializable , ISincronizable{
         this.existe = existe;
     }
 
-    public Float getX() {
+    public Double getX() {
         return x;
     }
 
-    public void setX(Float x) {
+    public void setX(Double x) {
         this.x = x;
     }
 
-    public Float getY() {
+    public Double getY() {
         return y;
     }
 
-    public void setY(Float y) {
+    public void setY(Double y) {
         this.y = y;
     }
 
