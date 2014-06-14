@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package bo.com.kibo.entidades;
 
+import bo.com.kibo.entidades.intf.IFormularioPostCenso;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,16 +13,20 @@ import java.util.List;
  *
  * @author Olvinho
  */
-public class FormularioCorta extends EncabezadoFormulario implements java.io.Serializable{
+public class FormularioCorta
+        extends EncabezadoFormulario
+        implements java.io.Serializable, IFormularioPostCenso {
 
     private Area area;
     private Byte horas;
-    private List<DetalleCorta> detalle = new ArrayList<>();
     
+    private List<DetalleCorta> detalle = new ArrayList<>();
+
     public FormularioCorta() {
         super.setTipo(EncabezadoFormulario.TIPO_FORMULARIO_CORTA);
     }
 
+    @Override
     public Area getArea() {
         return area;
     }
@@ -31,6 +35,7 @@ public class FormularioCorta extends EncabezadoFormulario implements java.io.Ser
         this.area = area;
     }
 
+    @Override
     public Byte getHoras() {
         return horas;
     }
@@ -39,6 +44,7 @@ public class FormularioCorta extends EncabezadoFormulario implements java.io.Ser
         this.horas = horas;
     }
 
+    @Override
     public List<DetalleCorta> getDetalle() {
         return detalle;
     }
@@ -46,6 +52,10 @@ public class FormularioCorta extends EncabezadoFormulario implements java.io.Ser
     public void setDetalle(List<DetalleCorta> detalle) {
         this.detalle = detalle;
     }
-    
-    
+
+    @Override
+    public Integer getId() {
+        return super.getId(); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

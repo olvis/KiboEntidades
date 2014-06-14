@@ -5,11 +5,14 @@
  */
 package bo.com.kibo.entidades;
 
+import bo.com.kibo.entidades.intf.IDetallePostCenso;
+
 /**
  *
  * @author Olvinho
  */
-public class DetalleExtraccion implements java.io.Serializable {
+public class DetalleExtraccion 
+implements java.io.Serializable , IDetallePostCenso{
 
     private Integer id;
     private Troza troza;
@@ -33,6 +36,7 @@ public class DetalleExtraccion implements java.io.Serializable {
         this.id = id;
     }
 
+    @Override
     public Troza getTroza() {
         return troza;
     }
@@ -41,6 +45,7 @@ public class DetalleExtraccion implements java.io.Serializable {
         this.troza = troza;
     }
 
+    @Override
     public Especie getEspecie() {
         return especie;
     }
@@ -49,6 +54,7 @@ public class DetalleExtraccion implements java.io.Serializable {
         this.especie = especie;
     }
 
+    @Override
     public Carga getCarga() {
         return carga;
     }
@@ -57,6 +63,7 @@ public class DetalleExtraccion implements java.io.Serializable {
         this.carga = carga;
     }
 
+    @Override
     public Patio getPatio() {
         return patio;
     }
@@ -65,6 +72,7 @@ public class DetalleExtraccion implements java.io.Serializable {
         this.patio = patio;
     }
 
+    @Override
     public Calidad getCalidad() {
         return calidad;
     }
@@ -73,6 +81,7 @@ public class DetalleExtraccion implements java.io.Serializable {
         this.calidad = calidad;
     }
 
+    @Override
     public Float getDmayor() {
         return dmayor;
     }
@@ -81,6 +90,7 @@ public class DetalleExtraccion implements java.io.Serializable {
         this.dmayor = dmayor;
     }
 
+    @Override
     public Float getDmenor() {
         return dmenor;
     }
@@ -89,6 +99,7 @@ public class DetalleExtraccion implements java.io.Serializable {
         this.dmenor = dmenor;
     }
 
+    @Override
     public Float getLargo() {
         return largo;
     }

@@ -5,6 +5,7 @@
  */
 package bo.com.kibo.entidades;
 
+import bo.com.kibo.entidades.intf.IFormularioPostCenso;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +13,9 @@ import java.util.List;
  *
  * @author Olvinho
  */
-public class FormularioExtraccion extends EncabezadoFormulario implements java.io.Serializable {
+public class FormularioExtraccion
+        extends EncabezadoFormulario
+        implements java.io.Serializable, IFormularioPostCenso {
 
     private Area area;
     private Byte horas;
@@ -22,6 +25,7 @@ public class FormularioExtraccion extends EncabezadoFormulario implements java.i
         super.setTipo(TIPO_FORMULARIO_CORTA);
     }
 
+    @Override
     public Area getArea() {
         return area;
     }
@@ -30,6 +34,7 @@ public class FormularioExtraccion extends EncabezadoFormulario implements java.i
         this.area = area;
     }
 
+    @Override
     public Byte getHoras() {
         return horas;
     }
@@ -38,6 +43,7 @@ public class FormularioExtraccion extends EncabezadoFormulario implements java.i
         this.horas = horas;
     }
 
+    @Override
     public List<DetalleExtraccion> getDetalle() {
         return detalle;
     }
@@ -45,5 +51,5 @@ public class FormularioExtraccion extends EncabezadoFormulario implements java.i
     public void setDetalle(List<DetalleExtraccion> detalle) {
         this.detalle = detalle;
     }
- 
+
 }

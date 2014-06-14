@@ -5,6 +5,7 @@
  */
 package bo.com.kibo.entidades;
 
+import bo.com.kibo.entidades.intf.IFormularioPostCenso;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,33 +13,28 @@ import java.util.List;
  *
  * @author Olvinho
  */
-public class FormularioMovimiento extends EncabezadoFormulario implements java.io.Serializable {
+public class FormularioMovimiento
+        extends EncabezadoFormulario
+        implements java.io.Serializable, IFormularioPostCenso {
 
-    private Destino destino;
-    private Boolean despacho;
+    private String destino;
     private Area area;
     private Byte horas;
+    private String guia;
     private List<DetalleMovimiento> detalle = new ArrayList<>();
 
     public FormularioMovimiento() {
     }
 
-    public Destino getDestino() {
+    public String getDestino() {
         return destino;
     }
 
-    public void setDestino(Destino destino) {
+    public void setDestino(String destino) {
         this.destino = destino;
     }
-
-    public Boolean isDespacho() {
-        return despacho;
-    }
-
-    public void setDespacho(Boolean despacho) {
-        this.despacho = despacho;
-    }
-
+    
+    @Override
     public Area getArea() {
         return area;
     }
@@ -47,6 +43,7 @@ public class FormularioMovimiento extends EncabezadoFormulario implements java.i
         this.area = area;
     }
 
+    @Override
     public Byte getHoras() {
         return horas;
     }
@@ -55,6 +52,7 @@ public class FormularioMovimiento extends EncabezadoFormulario implements java.i
         this.horas = horas;
     }
 
+    @Override
     public List<DetalleMovimiento> getDetalle() {
         return detalle;
     }
@@ -62,6 +60,13 @@ public class FormularioMovimiento extends EncabezadoFormulario implements java.i
     public void setDetalle(List<DetalleMovimiento> detalle) {
         this.detalle = detalle;
     }
-    
 
+    public void setGuia(String guia) {
+        this.guia = guia;
+    }
+
+    public String getGuia() {
+        return guia;
+    }
+    
 }

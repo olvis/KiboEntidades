@@ -5,17 +5,19 @@
  */
 package bo.com.kibo.entidades;
 
+import bo.com.kibo.entidades.intf.IDetallePostCenso;
+
 /**
  *
  * @author Olvinho
  */
-public class DetalleMovimiento implements java.io.Serializable {
+public class DetalleMovimiento 
+implements java.io.Serializable, IDetallePostCenso {
 
     private Integer id;
     private Troza troza;
     private Calidad calidad;
     private Carga carga;
-    private Patio patio;
     private Especie especie;
     private Float dmayor;
     private Float dmenor;
@@ -33,6 +35,7 @@ public class DetalleMovimiento implements java.io.Serializable {
         this.id = id;
     }
 
+    @Override
     public Troza getTroza() {
         return troza;
     }
@@ -41,6 +44,7 @@ public class DetalleMovimiento implements java.io.Serializable {
         this.troza = troza;
     }
 
+    @Override
     public Calidad getCalidad() {
         return calidad;
     }
@@ -49,6 +53,7 @@ public class DetalleMovimiento implements java.io.Serializable {
         this.calidad = calidad;
     }
 
+    @Override
     public Carga getCarga() {
         return carga;
     }
@@ -56,15 +61,8 @@ public class DetalleMovimiento implements java.io.Serializable {
     public void setCarga(Carga carga) {
         this.carga = carga;
     }
-
-    public Patio getPatio() {
-        return patio;
-    }
-
-    public void setPatio(Patio patio) {
-        this.patio = patio;
-    }
-
+    
+    @Override
     public Especie getEspecie() {
         return especie;
     }
@@ -73,6 +71,7 @@ public class DetalleMovimiento implements java.io.Serializable {
         this.especie = especie;
     }
 
+    @Override
     public Float getDmayor() {
         return dmayor;
     }
@@ -81,6 +80,7 @@ public class DetalleMovimiento implements java.io.Serializable {
         this.dmayor = dmayor;
     }
 
+    @Override
     public Float getDmenor() {
         return dmenor;
     }
@@ -89,6 +89,7 @@ public class DetalleMovimiento implements java.io.Serializable {
         this.dmenor = dmenor;
     }
 
+    @Override
     public Float getLargo() {
         return largo;
     }
@@ -103,6 +104,11 @@ public class DetalleMovimiento implements java.io.Serializable {
 
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
+    }
+
+    @Override
+    public Patio getPatio() {
+        return null;
     }
 
 }
