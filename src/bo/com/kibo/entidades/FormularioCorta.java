@@ -19,7 +19,7 @@ public class FormularioCorta
 
     private Area area;
     private Byte horas;
-    
+
     private List<DetalleCorta> detalle = new ArrayList<>();
 
     public FormularioCorta() {

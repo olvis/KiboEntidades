@@ -19,12 +19,11 @@ public class GeoLugar implements java.io.Serializable, ISincronizable {
     public static byte TIPO_AREA = 0;
     public static byte TIPO_FAJA = 1;
     public static byte TIPO_PATIO = 2;
-    
+
     private Integer id;
     private Date modificado;
     private byte tipo;
     private List<PuntoXY> poligono = new ArrayList<>();
-            
 
     public GeoLugar() {
     }
@@ -47,7 +46,6 @@ public class GeoLugar implements java.io.Serializable, ISincronizable {
         return modificado;
     }
 
-    
     public void setModificado(Date modificado) {
         this.modificado = modificado;
     }
@@ -67,5 +65,5 @@ public class GeoLugar implements java.io.Serializable, ISincronizable {
     public void setPoligono(List<PuntoXY> poligono) {
         this.poligono = poligono;
     }
-    
+
 }

@@ -24,6 +24,7 @@ public class FormularioMovimiento
     private List<DetalleMovimiento> detalle = new ArrayList<>();
 
     public FormularioMovimiento() {
+        super.setTipo(TIPO_FORMULARIO_MOVIMIENTO);
     }
 
     public String getDestino() {
@@ -33,7 +34,7 @@ public class FormularioMovimiento
     public void setDestino(String destino) {
         this.destino = destino;
     }
-    
+
     @Override
     public Area getArea() {
         return area;
@@ -68,5 +69,5 @@ public class FormularioMovimiento
     public String getGuia() {
         return guia;
     }
-    
+
 }

@@ -11,12 +11,13 @@ import bo.com.kibo.entidades.intf.IDetallePostCenso;
  *
  * @author Olvinho
  */
-public class DetalleCorta 
-implements java.io.Serializable, IDetallePostCenso {
+public class DetalleCorta
+        implements java.io.Serializable, IDetallePostCenso {
 
     private Integer id;
     private Calidad calidad;
     private Carga carga;
+    private String codigoCarga;
     private Troza troza;
     private Especie especie;
     private Float dmayor;
@@ -40,6 +41,7 @@ implements java.io.Serializable, IDetallePostCenso {
         return calidad;
     }
 
+    @Override
     public void setCalidad(Calidad calidad) {
         this.calidad = calidad;
     }
@@ -49,8 +51,19 @@ implements java.io.Serializable, IDetallePostCenso {
         return carga;
     }
 
+    @Override
     public void setCarga(Carga carga) {
         this.carga = carga;
+    }
+
+    @Override
+    public String getCodigoCarga() {
+        return codigoCarga;
+    }
+
+    @Override
+    public void setCodigoCarga(String codigoCarga) {
+        this.codigoCarga = codigoCarga;
     }
 
     @Override
@@ -58,6 +71,7 @@ implements java.io.Serializable, IDetallePostCenso {
         return troza;
     }
 
+    @Override
     public void setTroza(Troza troza) {
         this.troza = troza;
     }
@@ -67,6 +81,7 @@ implements java.io.Serializable, IDetallePostCenso {
         return especie;
     }
 
+    @Override
     public void setEspecie(Especie especie) {
         this.especie = especie;
     }
@@ -88,7 +103,6 @@ implements java.io.Serializable, IDetallePostCenso {
     public void setDmenor(Float dmenor) {
         this.dmenor = dmenor;
     }
-
 
     @Override
     public Float getLargo() {

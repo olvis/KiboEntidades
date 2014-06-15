@@ -17,7 +17,7 @@ public class Usuario implements java.io.Serializable {
     private String contrasena;
     private String email;
     private String contrasenaDesencriptada;
-   
+
     public Usuario() {
     }
 
@@ -26,7 +26,7 @@ public class Usuario implements java.io.Serializable {
     }
 
     public void setId(Integer id) {
-        this.id = id;        
+        this.id = id;
     }
 
     public Rol getRol() {
@@ -68,5 +68,5 @@ public class Usuario implements java.io.Serializable {
     public void setContrasenaDesencriptada(String contrasenaDesencriptada) {
         this.contrasenaDesencriptada = contrasenaDesencriptada;
     }
-    
+
 }

@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package bo.com.kibo.entidades.reportes;
 
 import java.util.Date;
@@ -12,7 +11,7 @@ import java.util.Date;
  *
  * @author Olvinho
  */
-public class TrozaGeneral implements java.io.Serializable{
+public class TrozaGeneral implements java.io.Serializable {
 
     private Integer numero;
     private Date fechaTala;
@@ -23,13 +22,17 @@ public class TrozaGeneral implements java.io.Serializable{
     private String codigo;
     private String especie;
     private String calidad;
+    private String patio;
     private Double dmayor;
     private Double dmenor;
     private Double largo;
     private Double volumen;
     private Byte estado;
     private Byte existe;
-    
+    private Date fechaDespacho;
+    private String destino;
+    private String guia;
+
     public TrozaGeneral() {
     }
 
@@ -152,5 +155,37 @@ public class TrozaGeneral implements java.io.Serializable{
     public void setExiste(Byte existe) {
         this.existe = existe;
     }
-    
+
+    public String getPatio() {
+        return patio;
+    }
+
+    public void setPatio(String patio) {
+        this.patio = patio;
+    }
+
+    public Date getFechaDespacho() {
+        return fechaDespacho;
+    }
+
+    public void setFechaDespacho(Date fechaDespacho) {
+        this.fechaDespacho = fechaDespacho;
+    }
+
+    public String getDestino() {
+        return destino;
+    }
+
+    public void setDestino(String destino) {
+        this.destino = destino;
+    }
+
+    public String getGuia() {
+        return guia;
+    }
+
+    public void setGuia(String guia) {
+        this.guia = guia;
+    }
+
 }

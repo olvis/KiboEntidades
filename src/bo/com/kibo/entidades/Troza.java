@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author Olvinho
  */
-public class Troza implements java.io.Serializable , ISincronizable{
+public class Troza implements java.io.Serializable, ISincronizable {
 
     public static final byte ESTADO_CENSADA = 0;
     public static final byte ESTADO_TALADA = 1;
@@ -25,7 +25,7 @@ public class Troza implements java.io.Serializable , ISincronizable{
     public static final byte EXISTE_RECHAZADA_TALA = 4;
     public static final byte EXISTE_RECHAZADA_EXTRACCION = 5;
     public static final byte EXISTE_DESPACHADA = 6;
-    
+
     public static final String SEPARADOR_CODIGO = ".";
 
     private Integer numero;
@@ -37,6 +37,7 @@ public class Troza implements java.io.Serializable , ISincronizable{
     private Float dMayor;
     private Float dMenor;
     private Float largo;
+    private Patio patio;
     private Byte estado;
     private Byte existe;
     private Double x;
@@ -44,6 +45,7 @@ public class Troza implements java.io.Serializable , ISincronizable{
     private FormularioCenso formularioCenso;
     private FormularioCorta formularioCorta;
     private FormularioExtraccion formularioExtraccion;
+    private FormularioMovimiento formularioDespacho;
     private Faja faja;
     private Date modificado;
 
@@ -122,6 +124,14 @@ public class Troza implements java.io.Serializable , ISincronizable{
         this.largo = largo;
     }
 
+    public void setPatio(Patio patio) {
+        this.patio = patio;
+    }
+
+    public Patio getPatio() {
+        return patio;
+    }
+
     public Byte getEstado() {
         return estado;
     }
@@ -178,6 +188,14 @@ public class Troza implements java.io.Serializable , ISincronizable{
         this.formularioExtraccion = formularioExtraccion;
     }
 
+    public void setFormularioDespacho(FormularioMovimiento formularioDespacho) {
+        this.formularioDespacho = formularioDespacho;
+    }
+
+    public FormularioMovimiento getFormularioDespacho() {
+        return formularioDespacho;
+    }
+
     public Faja getFaja() {
         return faja;
     }
@@ -190,7 +208,6 @@ public class Troza implements java.io.Serializable , ISincronizable{
         return modificado;
     }
 
-   
     public void setModificado(Date modificado) {
         this.modificado = modificado;
     }

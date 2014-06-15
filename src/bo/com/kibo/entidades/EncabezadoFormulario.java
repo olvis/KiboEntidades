@@ -15,7 +15,9 @@ public class EncabezadoFormulario implements java.io.Serializable {
 
     public static final byte TIPO_FORMULARIO_CENSO = 0;
     public static final byte TIPO_FORMULARIO_CORTA = 1;
-    
+    public static final byte TIPO_FORMULARIO_EXTRACCION = 2;
+    public static final byte TIPO_FORMULARIO_MOVIMIENTO = 3;
+
     private Integer id;
     private byte tipo;
     private Date fecha;
@@ -46,6 +48,5 @@ public class EncabezadoFormulario implements java.io.Serializable {
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
-    
 
 }

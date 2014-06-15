@@ -9,7 +9,7 @@ package bo.com.kibo.entidades;
  *
  * @author Olvinho
  */
-public class PuntoXY implements java.io.Serializable{
+public class PuntoXY implements java.io.Serializable {
 
     private Double x;
     private Double y;

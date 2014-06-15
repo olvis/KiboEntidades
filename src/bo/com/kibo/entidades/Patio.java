@@ -11,18 +11,27 @@ package bo.com.kibo.entidades;
  */
 public class Patio extends GeoLugar implements java.io.Serializable {
 
-    private String descripcion;
+    private String nombre;
+    private Area area;
 
     public Patio() {
         super.setTipo(TIPO_PATIO);
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setArea(Area area) {
+        this.area = area;
+    }
+
+    public Area getArea() {
+        return area;
     }
 
 }

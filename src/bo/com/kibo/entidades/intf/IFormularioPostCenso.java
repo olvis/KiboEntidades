@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package bo.com.kibo.entidades.intf;
 
 import bo.com.kibo.entidades.Area;
@@ -15,14 +14,17 @@ import java.util.List;
  * @author Olvinho
  */
 public interface IFormularioPostCenso {
+
     Integer getId();
-    
+
+    byte getTipo();
+
     Area getArea();
-    
+
     Byte getHoras();
-    
+
     Date getFecha();
-    
+
     List getDetalle();
-    
+
 }
